@@ -24,13 +24,13 @@ getOperation:
 
 	switch operation {
 	case "+":
-		var firstNumber int = stringToInt(num1)
-		var secondNumber int = stringToInt(num2)
+		var firstNumber float64 = stringToFloat64(num1)
+		var secondNumber float64 = stringToFloat64(num2)
 		fmt.Print("Result: ")
 		fmt.Println(calc.Add(firstNumber, secondNumber))
 	case "-":
-		var firstNumber int = stringToInt(num1)
-		var secondNumber int = stringToInt(num2)
+		var firstNumber float64 = stringToFloat64(num1)
+		var secondNumber float64 = stringToFloat64(num2)
 		fmt.Print("Result: ")
 		fmt.Println(calc.Subtract(firstNumber, secondNumber))
 
@@ -50,15 +50,6 @@ getOperation:
 		fmt.Println("Invalid operation selected. Please try again!")
 		goto getOperation
 	}
-}
-
-func stringToInt(str string) int {
-	i, err := strconv.Atoi(str)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(2)
-	}
-	return i
 }
 
 func stringToFloat64(str string) float64 {
