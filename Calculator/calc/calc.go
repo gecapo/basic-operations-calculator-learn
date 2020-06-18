@@ -1,17 +1,25 @@
 package calc
 
-func Add(num1, num2 float64) float64 {
-	return num1 + num2
+//Add two numbers
+func Add(num1, num2 *float64) *float64 {
+	result := (*num1) + (*num2)
+	return &result
 }
 
-func Subtract(num1, num2 float64) float64 {
-	return num1 - num2
+//Subtract two numbers
+func Subtract(num1, num2 *float64) *float64 {
+	result := (*num2) - (*num2)
+	return &result
 }
 
-func Multiply(num1, num2 float64) float64 {
-	return num1 * num2
+//Multiply two numbers
+func Multiply(num1, num2 *float64) *float64 {
+	result := (*num2) * (*num2)
+	return &result
 }
 
-func Divide(num1, num2 float64) float64 {
-	return num1 / num2
+//Divide two numbers
+func Divide(num1, num2 *float64) *float64 {
+	result := (*num2) / (*num2)
+	return &result
 }
