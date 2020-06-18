@@ -38,7 +38,12 @@ getOperation:
 
 	case "/":
 		fmt.Print("Result: ")
-		fmt.Println(*calc.Divide(firstNumber, secondNumber))
+		result, err := calc.Divide(firstNumber, secondNumber)
+		if err != nil {
+			fmt.Println(err)
+			goto getOperation
+		}
+		fmt.Println(*result)
 
 	default:
 		fmt.Println("Invalid operation selected. Please try again!")
