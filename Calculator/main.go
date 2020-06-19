@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"./calc"
+	"github.com/gecapo/SimpleCalculator/Calculator/calc"
 )
 
 func main() {
